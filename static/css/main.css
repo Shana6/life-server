@@ -1,0 +1,7 @@
+body{
+	background-image: url("img/lifesitebg.png")
+}
+#despa{
+	animation-iteration-count: 1;
+	animation: step-start cubic-bezier(0.47, 0, 0.745, 0.715);
+}

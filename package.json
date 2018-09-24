@@ -1,0 +1,13 @@
+{
+	"name": "life-server",
+	"author": {
+		"name": "Sanae",
+		"url": "https://discord.gg/85V5p3F"
+	},
+	"description": "A calendar server that will support automatic setting of statuses or posting of activities.",
+	"dependencies": {
+		"ws": "6.0.0",
+		"express": "4.16.3",
+		"data-store": "3.1.0"
+	}
+}
