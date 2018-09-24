@@ -6,9 +6,9 @@ var calendar = new Store("calendar");
 var http = require("http");
 var path = require("path");
 var app = express();
+app.use(express.static(path.join(__dirname,"static")));
 var server = http.createServer(app);
 var wss = new ws.Server({server});
-app.use(express.static(path.join(__dirname,"static")));
 wss.on("connection",(ws)=>{//ws from computer or android phone
 	ws.on("ping",function(){
 		ws.emit("pong");
@@ -17,8 +17,8 @@ wss.on("connection",(ws)=>{//ws from computer or android phone
 		var msg = JSON.parse(data);
 		switch (msg.op){
 			case "user":
-				
+
 		}
 	})
 });
-server.listen(80);
+server.listen(process.env.PORT || 8080);
